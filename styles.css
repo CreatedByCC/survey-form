@@ -1,0 +1,197 @@
+/** https://survey-form.freecodecamp.rocks/  use as styling reference**/ 
+
+/** ** BASE STYLES - MOBILE FIRST ** **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-text-color);
+    font-size: 1rem;
+}
+:root {
+    --main-text-color: white;
+    --form-bg-color: rgba(27, 27, 50, 0.8);
+    --input-text-color: #495057;
+    --btn-bg-color: #37af65;
+
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+
+    --fs-title: 1rem;
+    --fs-description: 0.8rem;
+    --fs-labels: 0.5rem;
+    --fs-input: 0.4rem;
+    --fs-h2: 0.8rem;
+    --fs-comments: 0.8rem;
+    --fs-btn: 0.4rem;
+}
+
+html {
+  background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url("https://codenation.org/wp-content/uploads/2023/05/Chi-5-800x534.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.content-wrapper {
+    width: min(740px, 70%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** ** HEADER STYLES ** **/
+#header {
+    padding: 1.2em 0.2em 0.8em;
+    text-align: center;
+}
+#header #title {
+    font-weight: var(--fw-400);
+    font-size: var(--fs-title);
+}
+#header #description {
+    font-size: var(--fs-description);
+    font-weight: var(--fw-100);
+    font-style: italic;
+}
+
+/** ** FORM STYLES ** **/
+#survey-form {
+    background: var(--form-bg-color);
+    padding: 1.2em;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5em;
+}
+
+.form-section p,
+.form-section label {
+    font-size: var(--fs-labels);
+}
+ 
+.form-section input,
+.form-section textarea,
+.form-section select {
+    margin-bottom: 2em;
+    padding: 0.3em;
+    font-size: var(--fs-input);
+    color: var(--input-text-color);
+}
+
+#dropdown option {
+    color: var(--input-text-color);
+}
+
+.form-section label {
+    margin-bottom: 0.2em;
+    font-weight: var(--fw-300);
+}
+
+.form-section h2 {
+    font-weight: var(--fw-300);
+    font-size: var(--fs-h2);
+}
+
+.form-section span {
+    font-size: 0.8em;
+}
+
+input[type = "radio"],
+input[type = "checkbox"] {
+    width: auto;
+    height: 1.3em;
+    vertical-align: top;
+    margin-bottom: 0.5em;
+}
+
+#comments {
+    font-size: var(--fs-comments);
+    margin-bottom: 0.2em;
+}
+
+button {
+    width: 100%;
+    background-color: var(--btn-bg-color);
+    font-size: var(--fs-btn);
+    font-weight: var(--fw-300);
+    padding: 0.8em;
+    border: none;
+    margin-bottom: 1.5em;
+}
+
+
+/** ** TABLET STYLES ** **/
+@media (min-width:481px) {    
+    :root {
+        --fs-title: 1.8rem;
+        --fs-description: 1rem;
+        --fs-labels: 0.9rem;
+        --fs-input: 0.7rem;
+        --fs-h2: 0.95rem;
+        --fs-comments: 0.9rem;
+        --fs-btn: 0.7rem;
+    }
+
+    /** ** HEADER STYLES ** **/
+    #header {
+        padding: 2.5em 0.2em 1.3em;
+    }
+    
+    /** ** FORM STYLES ** **/
+    #survey-form {
+        padding: 2em;
+    }
+    
+    .form-section {
+        padding: 0.5em 0;
+    }
+     
+    .form-section input,
+    .form-section textarea,
+    .form-section select {
+        margin-bottom: 0.7em;
+    }
+    
+    .form-section h2 {
+        padding-bottom: 0.4em;
+    }
+
+    input[type = "radio"],
+    input[type = "checkbox"] {
+        width: 1em;
+        height: auto;
+        vertical-align: bottom;
+        margin-bottom: 0.5em;
+    }  
+
+    #comments {
+        margin-bottom: 1em;
+    }
+}
+
+/** ** DESKTOP STYLES ** **/
+@media (min-width:1025px) {
+    :root {
+        --fs-title: 2rem;
+        --fs-description: 1.1rem;
+        --fs-labels: 1.1rem;
+        --fs-input: 1rem;
+        --fs-h2: 1.1rem;
+        --fs-comments: 1rem;
+        --fs-btn: 0.9rem;
+    }
+
+    input[type = "radio"],
+    input[type = "checkbox"] {
+        height: auto;
+        width: 1.5em;
+        vertical-align: bottom;
+        margin-bottom: 0.5em;
+    }  
+}
